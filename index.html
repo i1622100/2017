@@ -194,6 +194,16 @@
 //      camera.updateProjectionMatrix();
     }
 
+      $(function() {
+  var i = 1;
+  setInterval(function() {
+    if(i > 3) i = 1;
+    $("#wrapper").css("background","url('./images/img"+i+"land_ocean_ice_cloud_2048.jpg')");
+    i++;
+    }, 4000
+  );
+});
+      
     var init = false;
     switch(state){
     case STATE.INIT:
