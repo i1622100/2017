@@ -27,8 +27,8 @@
     INIT: 0,
     READY: 1,
     PLAY: 2,
-    CLEAR: 3,
-    GAMEOVER: 4,
+    CLEAR: 2,
+    GAMEOVER: 5,
   }
   var state = STATE.INIT;
   
@@ -141,7 +141,7 @@
     var material_font = new THREE.MeshBasicMaterial( { color: 0xff6060 } );
     var geometry_ready = new THREE.TextGeometry( 'Ready?', {
       font: response,
-      size: 1.5,
+      size: 5.0,
       height: 0.1,
       curveSegments: 12,
       bevelEnabled: false,
@@ -215,6 +215,13 @@
       }
       break;
     case STATE.PLAY:
+            
+            <form action="#">
+<input type="button" value="Click Me!!"
+   onclick="window.alert('Hello!!')">
+</form>
+
+            
       // プレイ中
       var ix = Math.floor(pos.x+8.0);
       var iz = Math.floor(pos.z+4.0);
