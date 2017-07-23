@@ -96,6 +96,19 @@
     if(0===--load_num)state = STATE.READY;
   } );
 
+    /* 背景画像初期化 */
+    for(i = 0;i < 32;i++) {
+        for(j =14;j <18;j++) {
+            *(alpChePixel[1] + (j + i * 32)) = 0x004080ff;
+           
+    for(i =0;i < 480 * 480;i++) {
+        
+        r = rand() % 64 + 32;
+        g = rand() % 32;
+        b = rand() % 64 + 64;
+        
+        LpBPixel[i] = (r << 16) + (g << 8) + b;
+    
   // ステージの初期化  
   var stage_data = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 
@@ -255,6 +268,11 @@
       if(vel.y < -0.0001 * 10.0){
         state = STATE.GAMEOVER;
       }
+            
+        if(getasynckeystate(VK_IP)<0 && iY != 8 &&
+       abyMapinfo[ix + (iY-1)* 32] ==0) (
+        iDdy = -1    
+            
       // カップイン
       if(is_cup_in){
         state = STATE.CLEAR;
